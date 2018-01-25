@@ -1,0 +1,303 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+    body
+        include pug/svg.pug
+
+
+        #fullpage
+            .preview-section.section(style='background-image: url("./images/backgrounds/first-screen-bg.jpg")')
+                .preview-section__header
+                    .container
+                        .main-header
+                            .main-header__working-hours
+                                .working-hours
+                                    img(src='./images/icons/brooms.svg').working-hours__icon
+                                    .working-hours__content
+                                        .working-hours__title без выходных
+                                        .working-hours__text с 10:00 до 22:00
+                            .main-header__logo.logo
+                                img(src='./images/icons/crown.svg').logo__icon
+                                h2.logo__text Царская Изба
+                            .main-header__phone
+                                .phone
+                                    .phone__content
+                                        p (473) 229-68 ...
+                                        p 8-930-403-26 ...
+                                    img(src='./images/icons/phone.svg').phone__icon
+                .preview-section__content
+                    .preview-section__container
+                        .preview-section__title
+                            .main-title
+                                h1.main-title__text Загородный банный кЛуб
+                                img(src='./images/icons/wreath-left.svg').main-title__wreath.main-title__wreath_left
+                                img(src='./images/icons/wreath-right.svg').main-title__wreath.main-title__wreath_right
+                                img(src='./images/icons/stars.svg').main-title__stars
+                        .preview-section__infographic
+                            .infographic-grid
+                                .infographic-grid__item
+                                    .infographic-item
+                                        img(src='./images/icons/info1.svg').infographic-item__icon
+                                        p.infographic-item__text Индивидуальное бронирование
+                                .infographic-grid__item
+                                    .infographic-item
+                                        img(src='./images/icons/info2.svg').infographic-item__icon
+                                        p.infographic-item__text Приглашайте друзей и партнеров
+                                .infographic-grid__item
+                                    .infographic-item
+                                        img(src='./images/icons/info3.svg').infographic-item__icon
+                                        p.infographic-item__text Время аренды не ограничено
+
+            .slider-section.section
+                .slider-section__header
+                    .container
+                        .section-header
+                            .section-header__title
+                                .section-title
+                                    img(src='./images/icons/crown-leaves.svg').section-title__icon
+                                    h2.section-title__text Мы гарантируем Лeгкий пар <br/> и качественный отдых
+                            .section-header__descr
+                                p В нашей русской бане <br/> с комфортом может разместиться <br/> компания до 12 человек.
+                .slider-section__content
+                    .preview-slider.owl-carousel.owl-theme.js-preview-slider
+                        .preview-slide(style='background-image: url("./images/slides/slide1.jpg")')
+                            .preview-slide__descr Банный клуб "Царская изба" - место, куда не стыдно прийти с семьей, компанией или просто вдвоем. Дизайн баного клуба продуман до мелочей.
+                        .preview-slide(style='background-image: url("./images/backgrounds/first-screen-bg.jpg")')
+                            .preview-slide__descr Банный клуб "Царская изба" - место, куда не стыдно прийти с семьей, компанией или просто вдвоем. Дизайн баного клуба продуман до мелочей.
+                        .preview-slide(style='background-image: url("./images/slides/slide1.jpg")')
+                            .preview-slide__descr Банный клуб "Царская изба" - место, куда не стыдно прийти с семьей, компанией или просто вдвоем. Дизайн баного клуба продуман до мелочей.
+
+            .st-section.section
+                .st-section__header
+                    .container
+                        .section-header
+                            .section-header__title
+                                .section-title
+                                    img(src='./images/icons/crown-leaves.svg').section-title__icon
+                                    h2.section-title__text Прогрейтесь до глубины души!
+                            .section-header__descr Имеется все самое необходимое <br/> для вас и вашей компании:
+                .st-section__content
+                    .container.st-section__gallery
+                        .gallery-4el
+                            .gallery-4el__item
+                                .gallery-item
+                                    i.gallery-item__border.gallery-item__border_left
+                                    i.gallery-item__border.gallery-item__border_top
+                                    i.gallery-item__border.gallery-item__border_right
+                                    i.gallery-item__border.gallery-item__border_bottom
+                                    img(src='./images/previews/photo1.jpg' title="#" alt="#").gallery-item__image
+                                    .gallery-item__descr Парная с купелью
+                            .gallery-4el__item
+                                .gallery-item
+                                    i.gallery-item__border.gallery-item__border_left
+                                    i.gallery-item__border.gallery-item__border_top
+                                    i.gallery-item__border.gallery-item__border_right
+                                    i.gallery-item__border.gallery-item__border_bottom
+                                    img(src='./images/previews/photo2.jpg' title="" alt="").gallery-item__image
+                                    .gallery-item__descr Фито бочка
+                            .gallery-4el__item
+                                .gallery-item
+                                    i.gallery-item__border.gallery-item__border_left
+                                    i.gallery-item__border.gallery-item__border_top
+                                    i.gallery-item__border.gallery-item__border_right
+                                    i.gallery-item__border.gallery-item__border_bottom
+                                    img(src='./images/previews/photo3.jpg' title="#" alt="#").gallery-item__image
+                                    .gallery-item__descr Детская площадка </br> для семейного отдыка
+                            .gallery-4el__item
+                                .gallery-item
+                                    i.gallery-item__border.gallery-item__border_left
+                                    i.gallery-item__border.gallery-item__border_top
+                                    i.gallery-item__border.gallery-item__border_right
+                                    i.gallery-item__border.gallery-item__border_bottom
+                                    img(src='./images/previews/photo4.jpg' title="#" alt="#").gallery-item__image
+                                    .gallery-item__descr Зона барбекю <br/> со всем необходимым
+
+                    .container.st-section__descr
+                        .text-content
+                            .text-content__section
+                                h3.text-content__h3-title Русская баня на дровах
+                                .text-content__descr
+                                    p Загородный банный комплекс «Царская изба» расположен в 20 минута езды от города Воронежа, в живописном месте Рамонского района в окружении смешанного леса.
+                                    p У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса.
+                                    p Посидеть на открытой террасе, наслаждаясь природой и пением птиц.
+                            .text-content__section
+                                h4.text-content__h4-title Комплекс площадью 90 м2 включает в себя
+                                ul.text-content-list
+                                    li.text-content-list__li Парилку с купелью, и большой фито бочкой
+                                    li.text-content-list__li Имеется комната отдыха в которой вы можете отдохнуть после парилки
+                                    li.text-content-list__li Возможно пожарить шашлыки в отдельной зоне барбекю
+                                    li.text-content-list__li Есть детская игровая зона на улице
+                                    li.text-content-list__li Всем постелям мы предлагаем правильно запаренный банный веник в подарок.
+
+
+
+            .gallery-section.section
+                .gallery-section__signboard
+                    .signboard
+                        .signboard__inner.signboard__inner_gallery
+                            img(src='./images/icons/stars-yellow.svg').signboard__stars
+                            p.signboard__title У нас одна из лучших бань
+                            p.signboard__subtitle в Воронежской области
+                .gallery-section__gallery
+                    .gallery
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo5.jpg' title="" alt="").gallery-item__image
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo6.jpg' title="" alt="").gallery-item__image
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo7.jpg' title="" alt="").gallery-item__image
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo8.jpg' title="" alt="").gallery-item__image
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo9.jpg' title="" alt="").gallery-item__image
+                        .gallery__item
+                            .gallery-item.gallery-item_height_420
+                                i.gallery-item__border.gallery-item__border_left
+                                i.gallery-item__border.gallery-item__border_top
+                                i.gallery-item__border.gallery-item__border_right
+                                i.gallery-item__border.gallery-item__border_bottom
+                                img(src='./images/previews/photo10.jpg' title="" alt="").gallery-item__image
+
+
+            .services-section.section(style='background-image: url("./images/backgrounds/services-screen-bg.jpg")')
+                .services-section__header
+                    .container
+                        .section-title
+                            img(src='./images/icons/crown-leaves.svg').section-title__icon
+                            h2.section-title__text.section-title__text_fz_30 Расслабьтесь и ощутите <br/> оздоровительную силу <br/> русских парений.
+                .services-section__content
+                    .services-section__container
+                        .services-bl
+                            .services-bl__title
+                                .section-title
+                                    img(src='./images/icons/crown-leaves.svg').section-title__icon
+                                    h2.section-title__text услуги в нашей  бане
+                            .services-bl__prices
+                                .prices-grid
+                                    .prices-grid__item
+                                        .signboard
+                                            .signboard__inner
+                                                p.signboard__text.signboard__text_fz_24 Стоимость <br/> аренды бани
+                                                img(src='./images/icons/leaflet.svg').signboard__leaflet
+                                                p.signboard__text.signboard__text_fz_30 1500 РУБ/ЧАС
+                                                p.signboard__text.signboard__text_fz_20 с 10.00 до 22.00
+                                    .prices-grid__item
+                                        .signboard
+                                            .signboard__inner
+                                                p.signboard__text.signboard__text_fz_24 Стоимость <br/> аренды ПН-ЧТ
+                                                img(src='./images/icons/leaflet.svg').signboard__leaflet
+                                                p.signboard__text.signboard__text_fz_30 750 РУБ/ЧАС
+                                                p.signboard__text.signboard__text_fz_20 с 10.00 до 22.00
+                            .services-bl__info
+                                .services-info
+                                    .services-info__item
+                                        .info-item
+                                            img(src='./images/icons/clock.svg').info-item__icon
+                                            .info-item__content Минимальный срок аренды бани 4 часа
+                                    .services-info__item
+                                        .info-item
+                                            img(src='./images/icons/calendar.svg').info-item__icon
+                                            .info-item__content Возможна посуточная аренда комплекса
+
+
+            .reviews-section.section
+                .reviews-section__container
+                    h2.reviews-section__title отзывы
+                    .reviews-section__slider
+                        .reviews-slider.owl-carousel.owl-theme.js-reviews-slider
+                            .review-item
+                                .review-item__name Дмитрий Иванов
+                                img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                            .review-item
+                                .review-item__name Дмитрий Иванов
+                                img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                            .review-item
+                                .review-item__name Дмитрий Иванов
+                                img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                    .reviews-section__buttons
+                        a(href="#").button все отзывы
+
+            .contacts-section.section
+                .contacts-section__header
+                    .contacts-section__header-container
+                        .contacts-section__title
+                            .section-title
+                                img(src='./images/icons/crown-leaves.svg').section-title__icon
+                                h2.section-title__text.section-title__text_fz_30 Контакты
+                        .contacts-section__header-info
+                            .contacts-info-grid
+                                .contacts-info-grid__item
+                                    .contacts-info-item
+                                        img(src='./images/icons/large-leaf.svg').contacts-info-item__icon
+                                        .contacts-info-item__content
+                                            .contacts-info-item__title Мы работаем <br/> без выходных
+                                            .contacts-info-item__text с 10.00 до 22.00
+                                .contacts-info-grid__item
+                                    .contacts-info-item
+                                        img(src='./images/icons/large-leaf.svg').contacts-info-item__icon
+                                        .contacts-info-item__content
+                                            .contacts-info-item__title Будем рады ответить на ваши вопросы
+                                            .contacts-info-item__text (473)  33-34-35-6
+                .contacts-section__map
+                    #map
+
+                .contacts-section__contacts
+                    .container
+                        .grid
+                            .grid__item
+                                a(href="#").button.button_shadow_black Как добратся
+                            .grid__item
+                                nav.soc
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc1.svg').soc__icon
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc2.svg').soc__icon
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc3.svg').soc__icon
+                .contacts-section__footer
+                    .container
+                        .grid
+                            .grid__item
+                                p.page-footer__copy &copy; 2017 «Царская Изба»
+                            .grid__item
+                                a(href="#").page-footer__link Создание сайта
+                img(src='./images/icons/large-leaf.svg').contacts-section__large-leaf
+
+
+
+
+        include pug/scripts.pug
