@@ -697,6 +697,9 @@ body
 .phone
     display: flex
     align-items: center
+    text-decoration: none
+    color: #907948
+    pointer-events: none
     &__content
         font-size: 24px
         text-align: right
@@ -1013,6 +1016,9 @@ body
     min-width: 320px
 
 @media screen and (max-width: 1366px)
+    .phone
+        pointer-events: auto
+
     .reviews-section
         padding: 30px 0
         &__title
@@ -1070,6 +1076,9 @@ body
 
 
 @media screen and (max-width: 1024px)
+    .contacts-section__map-container_h480
+        height: auto
+
     .contacts-section__header-container
         width: auto
         max-width: 960px
