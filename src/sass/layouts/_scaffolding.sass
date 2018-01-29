@@ -29,6 +29,11 @@ body
     font-size: 16px
     background-color: #e8dfcd
 
+
+.section
+    width: 100%
+    height: 100vh
+
 .container
     max-width: 960px
     padding: 0 10px
@@ -36,10 +41,13 @@ body
     &_width_1660
         max-width: 1660px
 
-.st-section
-    height: 100vh
+.description-section
     width: 100%
-    position: relative
+    display: flex
+    flex-direction: column
+    &__container
+        width: 780px
+        margin: 0 auto
     &__header
         background-color: $brown
         position: relative
@@ -49,39 +57,85 @@ body
         position: relative
         z-index: 50
         padding: 55px 0
+        color: #271f1a
+        flex-grow: 1
+        display: flex
+        align-items: center
     &__gallery
         max-width: 1660px
         margin-bottom: 65px
 
+
+
+@keyframes mouseAnim
+    0%
+        bottom: 20px
+    50%
+        bottom: 10px
+    100%
+        bottom: 20px
+
+
+
 .preview-section
     width: 100%
     position: relative
-    -webkit-background-size: cover
-    background-size: cover
-    background-attachment: fixed
-    background-position: center 0
     display: flex
     flex-direction: column
+    &__mouse
+        width: 40px
+        height: 70px
+        position: absolute
+        margin-left: -20px
+        z-index: 150
+        left: 50%
+        bottom: 20px
+        animation-name: mouseAnim
+        animation-duration: 1.5s
+        animation-iteration-count: infinite;
     &__header
         background-color: $brown
         position: relative
         z-index: 100
         padding: 10px 0 25px
-        color: #907948 
+        color: #907948
+        border-bottom: 2px solid #d46528
     &__content
         position: relative
         z-index: 50
         flex-grow: 1
         display: flex
         align-items: flex-end
-        padding-bottom: 50px
+        padding-top: 50px
+        padding-bottom: 120px
+        overflow: hidden
     &__container
         width: 800px
         margin: 0 auto
+        position: relative
+        z-index: 100
     &__title
         max-width: 460px
         margin: 0 auto 25px
         color: #fff
+    &__bg
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 50
+        -webkit-background-size: cover
+        background-size: cover
+        background-position: center 0
+        &_vapor
+            width: 110%
+            height: 110%
+            left: -10%
+            top: -10%
+        &_man
+            background-attachment: fixed
+            z-index: 60
 
 .main-title
     position: relative
@@ -110,6 +164,7 @@ body
         line-height: 1.1em
         text-align: center
         text-transform: uppercase
+        font-weight: normal
 
 
 .slider-section
@@ -137,7 +192,10 @@ body
 
 
 .preview-slider
-    position: relative 
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
     height: 100%
     .owl-stage-outer, .owl-stage, .owl-item
         height: 100%
@@ -231,26 +289,76 @@ body
         flex-grow: 1
         display: flex
         align-items: center
-
+        padding: 50px 0
 
 .reviews-section
     padding: 25px 0 55px
     background-color: #ebe3d4
     display: flex
     align-items: center
+    &__container
+        width: 870px
+        padding: 0 10px
+        margin: 0 auto
     &__title
         margin-bottom: 35px
+        text-align: center
+
+
+.reviews-bl
+    background-image: url('../images/backgrounds/lines-bg.jpg')
+    background-repeat: repeat
+    padding: 15px
+    box-shadow: 0 0 10px 1px #000
+    &__content
+        padding: 20px 20px 30px
+        background-color: #f3e9d6
+        border: 1px solid #24211c
+    &__buttons
+        text-align: center
+    &__title
+        font-family: $mcr
+        text-transform: uppercase
         font-size: 35px
         line-height: 1em
         text-align: center
-    &__container
-        width: 800px
-        padding: 0 10px
-        margin: 0 auto
-    &__buttons
-        text-align: center
+        font-weight: normal
+        margin-bottom: 35px
     &__slider
         margin-bottom: 30px
+
+
+.reviews-title
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    padding: 60px 135px 0
+    &__branch-left
+        width: 127px
+        height: 45px
+        position: absolute
+        left: 0
+        top: 60px
+    &__branch-right
+        width: 127px
+        height: 45px
+        position: absolute
+        right: 0
+        top: 60px
+    &__crown
+        top: 0
+        width: 66px
+        height: 51px
+        left: 50%
+        margin-left: -33px
+        position: absolute
+    &__text
+        font-family: $mcr
+        text-transform: uppercase
+        font-size: 55px
+        line-height: 1em
+        text-align: center
+        font-weight: normal
 
 .contacts-section
     position: relative
@@ -258,8 +366,24 @@ body
     display: flex
     flex-direction: column
     width: 100%
-    &__map
+    &__map-container
         flex-grow: 1
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        &_h480
+            height: 480px
+    &__map-signboard
+        width: 350px
+        right: -300px
+        position: relative
+        z-index: 20
+    &__map
+        position: absolute
+        left: 0
+        width: 100%
+        top: 0
     &__large-leaf
         position: absolute
         width: 200px
@@ -346,6 +470,8 @@ body
         transform: rotate(135deg)
 
 .button
+    font-family: $hcm
+    line-height: 1em
     padding: 13px 20px
     font-size: 24px
     background-color: #d46528
@@ -364,7 +490,7 @@ body
     &_shadow_black
         box-shadow: 3px 3px 3px 0 #1e1814
     &:hover
-        background-color: #e6ce99
+        background-color: #ff6c00
     &:active
         top: 3px
         left: 3px
@@ -383,7 +509,57 @@ body
         height: 40px
 
 
+.review-form
+    background-image: url(../images/backgrounds/lines-bg.jpg)
+    background-repeat: repeat
+    padding: 20px
+    &__inner
+        background-color: #e6cd98
+        border: 1px solid #241f15
+        padding: 20px
+    &__buttons
+        text-align: center
+    &__main-container
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+    &__section
+        width: 47%
+
+.review-input-line
+    margin-bottom: 20px
+    &__name
+        font-size: 20px
+        margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+    &.error
+        .review-input-line__name
+            color: #d46528
+        .st-input, .st-textarea
+            border-color: #d46528
+            color: #d46528
+
+
+.st-input, .st-textarea
+    font-family: $hcm
+    font-size: 18px
+    background-color: #e7dbc4
+    border: 1px solid #241f15
+    width: 100%
+
+
+.st-input
+    height: 40px
+    padding: 0 15px
+
+.st-textarea
+    resize: none
+    padding: 15px
+    height: 170px
+
 .review-item
+    text-align: center
     &__name
         font-size: 22px
         color: #a2954d
@@ -463,12 +639,16 @@ body
     &__text
         margin-bottom: 10px
         line-height: 1em
+        &_fz_26
+            font-size: 26px
         &_fz_24
             font-size: 24px
         &_fz_30
             font-size: 30px
         &_fz_20
             font-size: 20px
+        &_fz_22
+            font-size: 22px
         &:last-child
             margin-bottom: 0
 
@@ -512,7 +692,7 @@ body
         color: #fdf7ec
         margin: 0
         text-shadow: 3px 3px #271f1a
-
+        font-weight: normal
 
 .phone
     display: flex
@@ -559,7 +739,7 @@ body
     &__icon
         width: 240px
         height: 44px
-        margin-bottom: 15px
+        margin-bottom: 5px
     &__text
         color: #e2ca97
         font-size: 30px
@@ -567,15 +747,28 @@ body
         font-family: $hcm
         line-height: 1.2em
         text-shadow: 3px 3px #271f1a
+        font-weight: normal
 
 
 
 .gallery-4el
     display: flex
     flex-wrap: wrap
+    height: 100%
+    max-width: 1500px
+    margin: 0 auto
     &__item
-        width: 25%
-        padding: 8px
+        width: 50%
+        padding: 12px
+    &__service-wrapper
+        text-align: center
+        color: #271f1a
+        background-image: url('../images/backgrounds/lines-bg.jpg')
+        background-repeat: repeat
+        padding: 18px
+        border: 1px solid #7e723f
+        height: 100%
+
 
 .gallery
     display: flex
@@ -587,39 +780,40 @@ body
 
 
 .gallery-item
-    padding-top: 115%
+    height: 100%
     position: relative
     cursor: pointer
     overflow: hidden
-    &_height_420
-        padding-top: 0
-        height: 100%
     &__border
         position: absolute
-        z-index: 100
-        background-color: #e2ca97
         transition: all 0.5s ease 0s
         opacity: 0
-        &_left
-            left: 60%
-            top: 40%
-            bottom: 40%
-            width: 2px
-        &_right
-            right: 60%
-            top: 40%
-            bottom: 40%
-            width: 2px
-        &_top
-            height: 2px
-            left: 40%
-            right: 40%
-            top: 60%
-        &_bottom
-            height: 2px
-            left: 40%
-            right: 40%
-            bottom: 60%
+        z-index: 20
+        left: 15px
+        top: 15px
+        bottom: 15px
+        right: 15px
+        border: 2px solid #e2ca97
+        //&_left
+        //    left: 60%
+        //    top: 40%
+        //    bottom: 40%
+        //    width: 2px
+        //&_right
+        //    right: 60%
+        //    top: 40%
+        //    bottom: 40%
+        //    width: 2px
+        //&_top
+        //    height: 2px
+        //    left: 40%
+        //    right: 40%
+        //    top: 60%
+        //&_bottom
+        //    height: 2px
+        //    left: 40%
+        //    right: 40%
+        //    bottom: 60%
     &:hover
         .gallery-item__image
             width: 120%
@@ -628,22 +822,22 @@ body
             top: -10%
         .gallery-item__border
             opacity: 1
-            &_left
-                bottom: 15px
-                left: 15px
-                top: 15px
-            &_right
-                top: 15px
-                bottom: 15px
-                right: 15px
-            &_top
-                right: 15px
-                left: 15px
-                top: 15px
-            &_bottom
-                right: 15px
-                left: 15px
-                bottom: 15px
+            //&_left
+            //    bottom: 15px
+            //    left: 15px
+            //    top: 15px
+            //&_right
+            //    top: 15px
+            //    bottom: 15px
+            //    right: 15px
+            //&_top
+            //    right: 15px
+            //    left: 15px
+            //    top: 15px
+            //&_bottom
+            //    right: 15px
+            //    left: 15px
+            //    bottom: 15px
         .gallery-item__descr
             bottom: 30px
     &__image
@@ -653,7 +847,7 @@ body
         width: 100%
         height: 100%
         object-fit: cover
-        transition: all 0.5s ease 0s
+        transition: all 0.7s ease 0s
     &__descr
         position: absolute
         bottom: 15px
@@ -661,9 +855,260 @@ body
         left: 10%
         text-align: center
         color: #ebe3d4
-        font-size: 20px
+        font-size: 30px
         font-family: $hcm
         line-height: 1.2em
         text-transform: uppercase
         transition: all 0.5s ease 0s
+        text-shadow: 3px 3px #271f1a
+        padding-top: 40px
+    &__leaflet
+        position: absolute
+        left: 50%
+        width: 70px
+        height: 34px
+        top: 0
+        margin-left: -35px
+
+#fp-nav
+    position: fixed
+    z-index: 100
+    margin-top: -32px
+    top: 50%
+    opacity: 1
+    right: 10px
+
+    li
+        display: block
+        text-align: center
+        margin: 7px
+        position: relative
+
+    a
+        width: 14px
+        height: 14px
+        display: inline-block
+        background-color: #e2ca97
+        border: 2px solid #a2954d
+        border-radius: 50%
+        transition: all 0.5s ease 0s
+        &.active
+            background-color: #d46528
+            border-color: #d46528
+            box-shadow: 0 0 5px 1px #362b23
+
+.text-content
+    font-size: 20px 
+    font-family: $gi
+    &__h3-title
+        font-size: 30px
+        font-family: $hcm
+        font-weight: normal
+        margin-bottom: 20px
+        color: #a2954d
+        text-align: center
+        line-height: 1em
+        text-transform: uppercase
+    &__h4-title
+        font-size: 22px
+        font-family: $hcm
+        font-weight: normal
+        margin-bottom: 20px
+        color: #a2954d
+        text-align: center
+        line-height: 1em
+        text-transform: uppercase
+    &__descr
+        line-height: 1.2em
+        text-indent: 30px
+    &__section
+        margin-bottom: 35px
+        &:last-child
+            margin-bottom: 0
+
+.text-content-list
+    line-height: 1.5em
+    list-style: none
+    li
+        position: relative
+        padding-left: 13px
+        &:before
+            content: ''
+            position: absolute
+            top: 12px
+            left: 0
+            width: 5px
+            height: 5px
+            background-color: #a2954d
+            border-radius: 50%
+
+
+.reviews-grid
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 620px
+    margin: 0 -10px
+    &__item
+        width: 50%
+        padding: 10px
+    &__item-wrapper
+        background-color: #e3cd9f
+        padding: 15px 15px 20px
+        border: 1px solid #22211e
+
+
+.reviews-static-section
+    &__header
+        background-color: $brown
+        position: relative
+        z-index: 100
+        padding: 10px 0 25px
+        color: #907948
+        border-bottom: 2px solid #d46528
+    &__title
+        font-family: $hcm
+        text-transform: uppercase
+        font-size: 35px
+        line-height: 1em
+        text-align: center
+        font-weight: normal
+        margin-bottom: 25px
+    &__nav
+        text-align: center
+        margin-bottom: 65px
+    &__content
+        background-color: #e7decc
+        padding: 20px 0 60px
+    &__list
+        margin-bottom: 25px
+
+.navigation
+    font-family: $hcm
+    font-size: 25px
+    display: inline-block
+    &__item
+        display: inline-block
+        vertical-align: middle
+        margin: 2px
+        height: 48px
+        width: 48px
+        text-align: center
+        line-height: 48px
+        transition: all 0.5s ease 0s
+        color: #50463c
+        background-color: #e4d0a6
+        text-decoration: none
+        &:hover
+            background-color: #aea262
+        &.active
+            background-color: #50463c
+            color: #e4d0a6
+
+
+@media screen and (max-width: 1024px)
+    .reviews-grid
+        max-height: 100%
+        &__item
+            width: 100%
+
+
+    .preview-section
+        &__content
+            padding-bottom: 20px
+        &__mouse
+            display: none
+    .section
+        height: auto
+
+    .slider-section__content
+        height: 550px
+
+    .services-list-section
+        height: 700px
+
+    .gallery-section
+        height: 700px
+
+
+@media screen and (max-width: 768px)
+    .main-header
+        flex-wrap: wrap
+        &__logo
+            width: 100%
+            order: 0
+            margin-bottom: 10px
+        &__working-hours
+            width: 50%
+            order: 1
+        &__phone
+            width: 50%
+            order: 2
+
+
+@media screen and (max-width: 550px)
+
+    .reviews-static-section
+        &__title
+            font-size: 30px
+            margin-bottom: 10px
+        &__list
+            margin-bottom: 10px
+        &__nav
+            margin-bottom: 30px
+
+    .review-form
+        &__section
+            width: 100%
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+        &__main-container
+            flex-wrap: wrap
+
+    .navigation
+        font-size: 20px
+        &__item
+            width: 40px
+            height: 40px
+            line-height: 40px
+
+
+    .review-item
+        &__content
+            font-size: 15px
+
+    .logo
+        &__icon
+            width: 50px
+            height: 40px
+            margin-bottom: 5px
+        &__text
+            font-size: 45px
+
+    .main-header
+        &__working-hours
+            text-align: center
+
+
+    .working-hours
+        display: inline-block
+        &__icon
+            margin-right: 0
+            margin-bottom: 10px
+
+    .phone
+        display: flex
+        width: 100%
+        flex-wrap: wrap
+        justify-content: center
+        text-align: center
+        &__icon
+            order: 0
+            margin: 0 0 10px
+        &__content
+            order: 1
+            width: 100%
+            text-align: center
+            font-size: 20px
 

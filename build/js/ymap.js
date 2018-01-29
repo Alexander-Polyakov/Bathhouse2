@@ -1,5 +1,5 @@
 ymaps.ready(function () {
-    var center = [51.65099076275837,39.28873186441802];
+    var center = [51.849613, 39.237281];
     var myMap = new ymaps.Map('map', {
         center: center,
         zoom: 15,
@@ -11,8 +11,8 @@ ymaps.ready(function () {
 
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../images/svg/icon-metka.svg',
-        iconImageSize: [35, 50]
+        iconImageHref: '../images/icons/marker.svg',
+        iconImageSize: [39, 58]
     });
 
 

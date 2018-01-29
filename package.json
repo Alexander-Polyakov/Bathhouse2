@@ -9,6 +9,7 @@
   "author": "Amir Gafurov <gafurovamir@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.2.5",
     "browser-sync": "^2.11.2",
     "gulp": "^3.8.1",
     "gulp-autoprefixer": "*",

@@ -11,8 +11,9 @@ html
         include pug/svg.pug
 
 
-        #fullpage
-            .preview-section.section(style='background-image: url("./images/backgrounds/first-screen-bg.jpg")')
+        #fullpage.page-wrapper
+            .preview-section.section.js-preview-screen
+                img(src='./images/icons/mouse.svg').preview-section__mouse
                 .preview-section__header
                     .container
                         .main-header
@@ -32,6 +33,8 @@ html
                                         p 8-930-403-26 ...
                                     img(src='./images/icons/phone.svg').phone__icon
                 .preview-section__content
+                    .preview-section__bg.preview-section__bg_man(style='background-image: url("./images/backgrounds/first-screen-man.png")')
+                    .preview-section__bg.preview-section__bg_vapor(style='background-image: url("./images/backgrounds/first-screen-vapor.png")')
                     .preview-section__container
                         .preview-section__title
                             .main-title
@@ -73,8 +76,43 @@ html
                         .preview-slide(style='background-image: url("./images/slides/slide1.jpg")')
                             .preview-slide__descr Банный клуб "Царская изба" - место, куда не стыдно прийти с семьей, компанией или просто вдвоем. Дизайн баного клуба продуман до мелочей.
 
-            .st-section.section
-                .st-section__header
+            .services-list-section.section
+                .gallery-4el
+                    .gallery-4el__item
+                        .gallery-4el__service-wrapper
+                            .gallery-item
+                                .gallery-item__border
+                                img(src='./images/previews/photo1.jpg' title="#" alt="#").gallery-item__image
+                                .gallery-item__descr
+                                    img(src='./images/icons/white-leaflet.svg').gallery-item__leaflet
+                                    | Парная с купелью
+                    .gallery-4el__item
+                        .gallery-4el__service-wrapper
+                            .gallery-item
+                                .gallery-item__border
+                                img(src='./images/previews/photo2.jpg' title="" alt="").gallery-item__image
+                                .gallery-item__descr
+                                    img(src='./images/icons/white-leaflet.svg').gallery-item__leaflet
+                                    | Фито бочка
+                    .gallery-4el__item
+                        .gallery-4el__service-wrapper
+                            .gallery-item
+                                .gallery-item__border
+                                img(src='./images/previews/photo3.jpg' title="#" alt="#").gallery-item__image
+                                .gallery-item__descr
+                                    img(src='./images/icons/white-leaflet.svg').gallery-item__leaflet
+                                    | Детская площадка </br> для семейного отдыка
+                    .gallery-4el__item
+                        .gallery-4el__service-wrapper
+                            .gallery-item
+                                .gallery-item__border
+                                img(src='./images/previews/photo4.jpg' title="#" alt="#").gallery-item__image
+                                .gallery-item__descr
+                                    img(src='./images/icons/white-leaflet.svg').gallery-item__leaflet
+                                    | т  Зона барбекю <br/> со всем необходимым
+
+            .description-section.section
+                .description-section__header
                     .container
                         .section-header
                             .section-header__title
@@ -82,43 +120,8 @@ html
                                     img(src='./images/icons/crown-leaves.svg').section-title__icon
                                     h2.section-title__text Прогрейтесь до глубины души!
                             .section-header__descr Имеется все самое необходимое <br/> для вас и вашей компании:
-                .st-section__content
-                    .container.st-section__gallery
-                        .gallery-4el
-                            .gallery-4el__item
-                                .gallery-item
-                                    i.gallery-item__border.gallery-item__border_left
-                                    i.gallery-item__border.gallery-item__border_top
-                                    i.gallery-item__border.gallery-item__border_right
-                                    i.gallery-item__border.gallery-item__border_bottom
-                                    img(src='./images/previews/photo1.jpg' title="#" alt="#").gallery-item__image
-                                    .gallery-item__descr Парная с купелью
-                            .gallery-4el__item
-                                .gallery-item
-                                    i.gallery-item__border.gallery-item__border_left
-                                    i.gallery-item__border.gallery-item__border_top
-                                    i.gallery-item__border.gallery-item__border_right
-                                    i.gallery-item__border.gallery-item__border_bottom
-                                    img(src='./images/previews/photo2.jpg' title="" alt="").gallery-item__image
-                                    .gallery-item__descr Фито бочка
-                            .gallery-4el__item
-                                .gallery-item
-                                    i.gallery-item__border.gallery-item__border_left
-                                    i.gallery-item__border.gallery-item__border_top
-                                    i.gallery-item__border.gallery-item__border_right
-                                    i.gallery-item__border.gallery-item__border_bottom
-                                    img(src='./images/previews/photo3.jpg' title="#" alt="#").gallery-item__image
-                                    .gallery-item__descr Детская площадка </br> для семейного отдыка
-                            .gallery-4el__item
-                                .gallery-item
-                                    i.gallery-item__border.gallery-item__border_left
-                                    i.gallery-item__border.gallery-item__border_top
-                                    i.gallery-item__border.gallery-item__border_right
-                                    i.gallery-item__border.gallery-item__border_bottom
-                                    img(src='./images/previews/photo4.jpg' title="#" alt="#").gallery-item__image
-                                    .gallery-item__descr Зона барбекю <br/> со всем необходимым
-
-                    .container.st-section__descr
+                .description-section__content
+                    .description-section__container
                         .text-content
                             .text-content__section
                                 h3.text-content__h3-title Русская баня на дровах
@@ -147,46 +150,28 @@ html
                 .gallery-section__gallery
                     .gallery
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo5.jpg' title="" alt="").gallery-item__image
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo6.jpg' title="" alt="").gallery-item__image
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo7.jpg' title="" alt="").gallery-item__image
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo8.jpg' title="" alt="").gallery-item__image
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo9.jpg' title="" alt="").gallery-item__image
                         .gallery__item
-                            .gallery-item.gallery-item_height_420
-                                i.gallery-item__border.gallery-item__border_left
-                                i.gallery-item__border.gallery-item__border_top
-                                i.gallery-item__border.gallery-item__border_right
-                                i.gallery-item__border.gallery-item__border_bottom
+                            .gallery-item
+                                .gallery-item__border
                                 img(src='./images/previews/photo10.jpg' title="" alt="").gallery-item__image
 
 
@@ -233,23 +218,31 @@ html
 
             .reviews-section.section
                 .reviews-section__container
-                    h2.reviews-section__title отзывы
+                    .reviews-section__title
+                        .reviews-title
+                            img(src='./images/icons/branch-title-left.svg').reviews-title__branch-left
+                            img(src='./images/icons/branch-title-right.svg').reviews-title__branch-right
+                            img(src='./images/icons/crown-title.svg').reviews-title__crown
+                            h2.reviews-title__text Царская Изба
                     .reviews-section__slider
-                        .reviews-slider.owl-carousel.owl-theme.js-reviews-slider
-                            .review-item
-                                .review-item__name Дмитрий Иванов
-                                img(src='./images/icons/leaflet.svg').review-item__leaflet
-                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
-                            .review-item
-                                .review-item__name Дмитрий Иванов
-                                img(src='./images/icons/leaflet.svg').review-item__leaflet
-                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
-                            .review-item
-                                .review-item__name Дмитрий Иванов
-                                img(src='./images/icons/leaflet.svg').review-item__leaflet
-                                .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
-                    .reviews-section__buttons
-                        a(href="#").button все отзывы
+                        .reviews-bl
+                            .reviews-bl__content
+                                .reviews-bl__title отзывы
+                                .reviews-bl__slider.reviews-slider.owl-carousel.owl-theme.js-reviews-slider
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                                .reviews-bl__buttons
+                                    a(href="#").button все отзывы
 
             .contacts-section.section
                 .contacts-section__header
@@ -272,8 +265,15 @@ html
                                         .contacts-info-item__content
                                             .contacts-info-item__title Будем рады ответить на ваши вопросы
                                             .contacts-info-item__text (473)  33-34-35-6
-                .contacts-section__map
-                    #map
+                .contacts-section__map-container
+                    .contacts-section__map#map
+                    .contacts-section__map-signboard
+                        .signboard
+                            .signboard__inner
+                                p.signboard__text.signboard__text_fz_26 Приезжайте, <br/> мы ждем вас
+                                img(src='./images/icons/leaflet.svg').signboard__leaflet
+                                p.signboard__text.signboard__text_fz_20 Рамонский р-н СНТ "Политехник" 20 минут от Воронежа
+                                p.signboard__text.signboard__text_fz_22 51.849613°    39.237281°
 
                 .contacts-section__contacts
                     .container

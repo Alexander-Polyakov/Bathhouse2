@@ -1,0 +1,145 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+    body
+        include pug/svg.pug
+
+
+        .page-wrapper
+            .reviews-static-section
+                .reviews-static-section__header
+                    .container
+                        .main-header
+                            .main-header__working-hours
+                                .working-hours
+                                    img(src='./images/icons/brooms.svg').working-hours__icon
+                                    .working-hours__content
+                                        .working-hours__title без выходных
+                                        .working-hours__text с 10:00 до 22:00
+                            .main-header__logo.logo
+                                img(src='./images/icons/crown.svg').logo__icon
+                                h2.logo__text Царская Изба
+                            .main-header__phone
+                                .phone
+                                    .phone__content
+                                        p (473) 229-68 ...
+                                        p 8-930-403-26 ...
+                                    img(src='./images/icons/phone.svg').phone__icon
+            .reviews-static-section__content
+                .container
+                    p.reviews-static-section__title отзывы
+                    .reviews-static-section__list
+                        .reviews-grid
+                            .reviews-grid__item
+                                .reviews-grid__item-wrapper
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое У нас можно отлично провести время с друзьями или отметить любое
+                            .reviews-grid__item
+                                .reviews-grid__item-wrapper
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц.
+                            .reviews-grid__item
+                                .reviews-grid__item-wrapper
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц.
+                            .reviews-grid__item
+                                .reviews-grid__item-wrapper
+                                    .review-item
+                                        .review-item__name Дмитрий Иванов
+                                        img(src='./images/icons/leaflet.svg').review-item__leaflet
+                                        .review-item__content У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое У нас можно отлично провести время с друзьями или отметить любое
+                    .reviews-static-section__nav
+                        .navigation
+                            a(href="#").navigation__item.active 1
+                            a(href="#").navigation__item 2
+                            a(href="#").navigation__item 3
+                            a(href="#").navigation__item 4
+                            a(href="#").navigation__item >>
+                    p.reviews-static-section__title Оставьте свой отзыв:
+                    .reviews-static-section__form
+                        .review-form
+                            .review-form__inner
+                                .review-form__main-container
+                                    .review-form__section
+                                        .review-input-line.error
+                                            p.review-input-line__name Имя
+                                            input(type='text').st-input
+                                        .review-input-line
+                                            p.review-input-line__name E-mail
+                                            input(type='text').st-input
+                                    .review-form__section
+                                        .review-input-line
+                                            p.review-input-line__name Текст отзыва
+                                            textarea.st-textarea
+                                .review-form__buttons
+                                    button.button оставить отзыв
+
+            .contacts-section
+                .contacts-section__header
+                    .contacts-section__header-container
+                        .contacts-section__title
+                            .section-title
+                                img(src='./images/icons/crown-leaves.svg').section-title__icon
+                                h2.section-title__text.section-title__text_fz_30 Контакты
+                        .contacts-section__header-info
+                            .contacts-info-grid
+                                .contacts-info-grid__item
+                                    .contacts-info-item
+                                        img(src='./images/icons/large-leaf.svg').contacts-info-item__icon
+                                        .contacts-info-item__content
+                                            .contacts-info-item__title Мы работаем <br/> без выходных
+                                            .contacts-info-item__text с 10.00 до 22.00
+                                .contacts-info-grid__item
+                                    .contacts-info-item
+                                        img(src='./images/icons/large-leaf.svg').contacts-info-item__icon
+                                        .contacts-info-item__content
+                                            .contacts-info-item__title Будем рады ответить на ваши вопросы
+                                            .contacts-info-item__text (473)  33-34-35-6
+                .contacts-section__map-container.contacts-section__map-container_h480
+                    .contacts-section__map#map
+                    .contacts-section__map-signboard
+                        .signboard
+                            .signboard__inner
+                                p.signboard__text.signboard__text_fz_26 Приезжайте, <br/> мы ждем вас
+                                img(src='./images/icons/leaflet.svg').signboard__leaflet
+                                p.signboard__text.signboard__text_fz_20 Рамонский р-н СНТ "Политехник" 20 минут от Воронежа
+                                p.signboard__text.signboard__text_fz_22 51.849613°    39.237281°
+
+                .contacts-section__contacts
+                    .container
+                        .grid
+                            .grid__item
+                                a(href="#").button.button_shadow_black Как добратся
+                            .grid__item
+                                nav.soc
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc1.svg').soc__icon
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc2.svg').soc__icon
+                                    a(href="#").soc__link
+                                        img(src='./images/icons/soc3.svg').soc__icon
+                .contacts-section__footer
+                    .container
+                        .grid
+                            .grid__item
+                                p.page-footer__copy &copy; 2017 «Царская Изба»
+                            .grid__item
+                                a(href="#").page-footer__link Создание сайта
+                img(src='./images/icons/large-leaf.svg').contacts-section__large-leaf
+
+
+
+
+        include pug/scripts.pug
