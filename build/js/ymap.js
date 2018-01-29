@@ -11,7 +11,7 @@ ymaps.ready(function () {
 
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../images/icons/marker.svg',
+        iconImageHref: './images/icons/marker.svg',
         iconImageSize: [39, 58]
     });
 

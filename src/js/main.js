@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-    if ($(window).width() > 1024) {
+    if ($(window).width() > 1366) {
         $('#fullpage').fullpage({
             verticalCentered: false,
             css3: false,
