@@ -1,6 +1,15 @@
 
 $(document).ready(function(){
+    $(".js-popup-open").click(function(){
+       $(".js-popup").fadeIn(400);
+    });
 
+
+    $(".js-popup-close").click(function(){
+        var src = $(".popup__video").attr('src');
+        $(".popup__video").attr('src', src);
+        $(".js-popup").fadeOut(400);
+    });
 
     if ($(window).width() > 1366) {
         $('#fullpage').fullpage({

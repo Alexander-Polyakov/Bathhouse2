@@ -432,6 +432,10 @@ body
 .contacts-info-item
     display: flex
     align-items: center
+    &__phone
+        color: inherit
+        text-decoration: none
+        pointer-events: none
     &__icon
         height: 105px
         width: 70px
@@ -680,6 +684,8 @@ body
 
 .logo
     text-align: center
+    display: block
+    text-decoration: none
     &__icon
         width: 66px
         height: 51px
@@ -964,7 +970,28 @@ body
         border: 1px solid #22211e
 
 
+
+.breadcrumbs
+    &__item
+        text-decoration: none
+        margin-right: 15px
+        position: relative
+        color: #362b23
+        &:after
+            content: '/'
+            position: absolute
+            right: -9px
+            top: 0
+        &:last-child
+            &:after
+                display: none
+    a:hover
+        text-decoration: underline
+
+
 .reviews-static-section
+    &__breadcrumbs
+        margin-bottom: 15px
     &__header
         background-color: $brown
         position: relative
@@ -1011,6 +1038,62 @@ body
             background-color: #50463c
             color: #e4d0a6
 
+
+
+.popup
+    position: fixed
+    z-index: 5000
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    display: none
+    background-color: #ebe3d4
+    &__close
+        width: 40px
+        height: 40px
+        position: absolute
+        right: 20px
+        top: 20px
+        transform: rotate(45deg)
+        cursor: pointer
+        &:before
+            content: ''
+            width: 100%
+            height: 2px
+            background-color: #333
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -1px
+        &:after
+            content: ''
+            width: 2px
+            height: 100%
+            background-color: #333
+            position: absolute
+            left: 50%
+            top: 0
+            margin-left: -1px
+    &__flex
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__container
+        width: 800px
+    &__title
+        margin-bottom: 20px
+    &__descr
+        font-size: 20px
+        font-family: $gi
+        line-height: 1.5em
+        margin-bottom: 20px
+        text-align: center
+    &__video
+        width: 100%
+        height: 500px
 
 .page-wrapper
     min-width: 320px
@@ -1076,6 +1159,25 @@ body
 
 
 @media screen and (max-width: 1024px)
+    .popup__video
+        height: 450px
+
+    .popup
+        overflow: auto
+
+    .popup__flex
+        display: block
+
+    .popup__container
+        max-width: 800px
+        width: auto
+        padding: 50px 10px
+        margin: 0 auto
+
+    .contacts-info-item
+        &__phone
+            pointer-events: auto
+
     .contacts-section__map-container_h480
         height: auto
 
@@ -1201,6 +1303,19 @@ body
     .contacts-info-item__title
         font-size: 20px
 
+@media screen and (max-width: 660px)
+    .popup__close
+        width: 30px
+        height: 30px
+
+    .popup__descr
+        font-size: 16px
+
+    .popup__title
+        margin-bottom: 0
+
+    .popup__video
+        height: 350px
 
 @media screen and (max-width: 550px)
     .main-header

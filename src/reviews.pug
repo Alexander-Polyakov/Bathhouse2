@@ -20,9 +20,10 @@ html
                                     .working-hours__content
                                         .working-hours__title без выходных
                                         .working-hours__text с 10:00 до 22:00
-                            .main-header__logo.logo
-                                img(src='./images/icons/crown.svg').logo__icon
-                                h2.logo__text Царская Изба
+                            .main-header__logo
+                                a(href='/').logo
+                                    img(src='./images/icons/crown.svg').logo__icon
+                                    h2.logo__text Царская Изба
                             .main-header__phone
                                 a(href="tel:8-930-403-26 22").phone
                                     .phone__content
@@ -31,6 +32,10 @@ html
                                     img(src='./images/icons/phone.svg').phone__icon
             .reviews-static-section__content
                 .container
+                    .reviews-static-section__breadcrumbs
+                        nav.breadcrumbs
+                            a(href="#").breadcrumbs__item Главная
+                            span.breadcrumbs__item Отзывы
                     p.reviews-static-section__title отзывы
                     .reviews-static-section__list
                         .reviews-grid

@@ -78,7 +78,7 @@ html
                 .gallery-4el
                     .gallery-4el__item
                         .gallery-4el__service-wrapper
-                            .gallery-item
+                            a(href='./images/previews/photo1.jpg' data-fancybox="Image1").gallery-item
                                 .gallery-item__border
                                 img(src='./images/previews/photo1.jpg' title="#" alt="#").gallery-item__image
                                 .gallery-item__descr
@@ -86,7 +86,7 @@ html
                                     | Парная с купелью
                     .gallery-4el__item
                         .gallery-4el__service-wrapper
-                            .gallery-item
+                            a(href='./images/previews/photo2.jpg' data-fancybox="Image2").gallery-item
                                 .gallery-item__border
                                 img(src='./images/previews/photo2.jpg' title="" alt="").gallery-item__image
                                 .gallery-item__descr
@@ -94,7 +94,7 @@ html
                                     | Фито бочка
                     .gallery-4el__item
                         .gallery-4el__service-wrapper
-                            .gallery-item
+                            a(href='./images/previews/photo6.jpg' data-fancybox="Image3").gallery-item
                                 .gallery-item__border
                                 img(src='./images/previews/photo6.jpg' title="#" alt="#").gallery-item__image
                                 .gallery-item__descr
@@ -102,7 +102,7 @@ html
                                     | Детская площадка </br> для семейного отдыка
                     .gallery-4el__item
                         .gallery-4el__service-wrapper
-                            .gallery-item
+                            a(href='./images/previews/photo7.jpg' data-fancybox="Image4").gallery-item
                                 .gallery-item__border
                                 img(src='./images/previews/photo7.jpg' title="#" alt="#").gallery-item__image
                                 .gallery-item__descr
@@ -262,7 +262,9 @@ html
                                         img(src='./images/icons/large-leaf.svg').contacts-info-item__icon
                                         .contacts-info-item__content
                                             .contacts-info-item__title Будем рады ответить на ваши вопросы
-                                            .contacts-info-item__text (473)  33-34-35-6
+                                            .contacts-info-item__text
+                                                a(href='').contacts-info-item__phone (473)  33-34-35-6
+
                 .contacts-section__map-container
                     .contacts-section__map#map
                     .contacts-section__map-signboard
@@ -277,7 +279,7 @@ html
                     .container
                         .grid
                             .grid__item
-                                a(href="#").button.button_shadow_black Как добратся
+                                .button.button_shadow_black.js-popup-open Как добратся
                             .grid__item
                                 nav.soc
                                     a(href="#").soc__link
@@ -295,6 +297,15 @@ html
                                 a(href="#").page-footer__link Создание сайта
                 img(src='./images/icons/large-leaf.svg').contacts-section__large-leaf
 
+        .popup.js-popup
+            .popup__close.js-popup-close
+            .popup__flex
+                .popup__container
+                    .popup__title
+                        .section-title
+                            img(src='./images/icons/crown-leaves.svg').section-title__icon
+                    .popup__descr  У нас можно отлично провести время с друзьями или отметить любое мероприятие, попарится, душевно побеседовать за чашкой ароматного чая или прохладного кваса. Посидеть на открытой террасе, наслаждаясь природой и пением птиц. У нас можно отлично провести время с друзьями или отметить любое
+                    iframe(src="https://www.youtube-nocookie.com/embed/Q1n6BErrPFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen).popup__video
 
 
 
